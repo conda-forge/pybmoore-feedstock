@@ -1,5 +1,5 @@
 {% set name = "pybmoore" %}
-{% set version = "2.0.2" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pybmoore-{{ version }}.tar.gz
-  sha256: 43505fe152a04d8f8d71a4173c325e39732ecd5c956687b8e149a3372e2df84f
+  sha256: d95371311e60b2e59a8dab609838799ca22831fc6f9d14199a560f5d9b5e7d1d
 
 build:
   skip: true  # [py<39]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   build:
